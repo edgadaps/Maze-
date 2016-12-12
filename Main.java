@@ -43,14 +43,17 @@ public class Main extends JFrame {
 			bey2.xPos = bey2.xPos + (int)bey2.xSpeed;
 			bey1.yPos = bey1.yPos + (int)bey1.ySpeed;
 			bey2.yPos = bey2.yPos + (int)bey2.ySpeed;
-//
+
 //			System.out.println(bey1.xPos);
 //			System.out.println(bey2.xPos);
 //			System.out.println(collision);
 //			System.out.println(bey1.xSpeed);
+			
 			collision = false;
+			
 //			if(Math.max(bey1.xPos, bey2.xPos)-Math.min(bey1.xPos, bey2.xPos)<50 && 
 //					Math.max(bey1.yPos, bey2.yPos)-Math.min(bey1.yPos, bey2.yPos)<50){
+			
 			if(Math.pow(Math.abs(bey1.xPos-bey2.xPos),2)+Math.pow(Math.abs(bey1.yPos-bey2.yPos),2)<2500){
 				bey1.spdX = bey1.xSpeed;
 				bey1.spdY = bey1.ySpeed;
@@ -121,8 +124,6 @@ public class Main extends JFrame {
 				y = panel.getHeight();
 				Beyblade bey1 = new Beyblade(30,30);
 				Beyblade bey2 = new Beyblade(570,370);
-//				Threads one = new Threads(bey1);
-//				Threads two = new Threads(bey2);
 				update(bey1,bey2);
 
 			}
